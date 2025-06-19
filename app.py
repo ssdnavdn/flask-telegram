@@ -18,6 +18,10 @@ class Comment(db.Model):
     content = db.Column(db.Text)
     telegram_id = db.Column(db.String(50), nullable=True)  # Можно оставить поле, но сделать nullable
 
+@app.route("/")
+def home():
+    return "Приложение работает!"
+
 @app.route('/topic/<topic>', methods=['GET', 'POST'])
 def topic_page(topic):
     if request.method == 'POST':
