@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ topic }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+</head>
+<body>
+    <div class="main">
+        <h1>Тема: {{ topic }}</h1>
+
+        <form method="POST">
+            <textarea name="comment" rows="4" cols="50" maxlength="40" placeholder="Оставьте комментарий..."></textarea><br>
+            <button type="submit">Отправить</button>
+        </form>
+
+        <h2>Комментарии:</h2>
+        <div class="comments">
+            {% for c in comments %}
+                <li>{{ c.content }}</li>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
