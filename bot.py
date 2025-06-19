@@ -10,7 +10,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 # ===== Конфигурация =====
 BOT_TOKEN = '7265483449:AAHcydzBcNTUsh_BWVjfsF-BcDyHr7iox_Y'
-BASE_URL = 'http://127.0.0.1:5000'
+BASE_URL = 'https://flask-telegram.onrender.com'
 
 # ===== FSM состояния =====
 class PollState(StatesGroup):
