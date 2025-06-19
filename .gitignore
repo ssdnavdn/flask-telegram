@@ -1,0 +1,3 @@
+git add .
+git commit -m "Удалены лишние файлы и добавлен .gitignore"
+git push
